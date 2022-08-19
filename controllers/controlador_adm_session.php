@@ -6,7 +6,7 @@
  * @final En proceso
  *
  */
-namespace tglobally\tg_banco\controllers;
+namespace tglobally\tg_facturacion\controllers;
 
 use config\generales;
 use gamboamartin\errores\errores;
