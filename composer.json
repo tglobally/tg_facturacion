@@ -1,6 +1,6 @@
 {
-  "name": "tglobally/tg_banco",
-  "description": "Catalogos de Bancos",
+  "name": "tglobally/tg_facturacion",
+  "description": "Catalogos de facturacion",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
@@ -12,7 +12,7 @@
 
     "autoload": {
         "psr-4": {
-          "tglobally\\tg_banco\\controllers\\": "controllers",
+          "tglobally\\tg_facturacion\\controllers\\": "controllers",
             "config\\": "config/",
             "models\\": "orm",
             "tests\\": "tests/",
