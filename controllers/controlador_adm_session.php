@@ -20,7 +20,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $include_menu = '';
     public string $mensaje_html = '';
 
-    public array $secciones = array("fc_factura");
+    public array $secciones = array("fc_factura","fc_partida");
     public array $links_catalogos = array();
 
     public stdClass $links;
@@ -38,6 +38,9 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
         $this->links_catalogos["fc_factura"]["titulo"] = "Facturas";
         $this->links_catalogos["fc_factura"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_partida"]["titulo"] = "Partidas";
+        $this->links_catalogos["fc_partida"]["subtitulo"] = "Catologo";
+
     }
 
     /**

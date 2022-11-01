@@ -8,7 +8,7 @@
         <h3 class="text-center titulo-form">Hola, <?php echo $controlador->datos_session_usuario['adm_usuario_user']; ?> </h3>
 
         <div class="  form-main" id="form">
-            <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional">
+            <form method="post" action="<?php echo $controlador->link_modifica_bd;?>" class="form-additional">
 
                 <?php echo $controlador->inputs->fc_csd_id; ?>
                 <?php echo $controlador->inputs->com_sucursal_id; ?>
