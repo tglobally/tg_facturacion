@@ -29,7 +29,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     {
         parent::__construct($link, $paths_conf);
 
-        $this->links = (new links_menu($this->registro_id))->genera_links($this);
+        $this->links = (new links_menu(link: $link, registro_id: $this->registro_id))->genera_links($this);
         if (errores::$error) {
             $error = $this->errores->error(mensaje: 'Error al inicializar links', data: $this->links);
             print_r($error);
