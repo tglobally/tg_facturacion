@@ -8,11 +8,11 @@
         <h3 class="text-center titulo-form">Hola, <?php echo $controlador->datos_session_usuario['adm_usuario_user']; ?> </h3>
 
         <div class="  form-main" id="form">
-            <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional">
+            <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional" enctype="multipart/form-data">
 
                 <?php echo $controlador->inputs->codigo; ?>
                 <?php echo $controlador->inputs->codigo_bis; ?>
-                <?php echo $controlador->inputs->doc_documento_id; ?>
+                <?php echo $controlador->inputs->documento; ?>
                 <?php echo $controlador->inputs->fc_csd_id; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
