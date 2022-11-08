@@ -1,6 +1,6 @@
 <?php /** @var \tglobally\tg_facturacion\controllers\controlador_fc_csd $controlador */ ?>
 
-<?php (new \tglobally\template_tg\template())->sidebar($controlador); ?>
+<?php (new \tglobally\template_tg\template())->sidebar($controlador,3); ?>
 
 <div class="col-md-9 formulario">
     <div class="col-lg-12">
