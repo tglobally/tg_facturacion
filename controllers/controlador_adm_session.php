@@ -19,8 +19,9 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public bool $existe_msj = false;
     public string $include_menu = '';
     public string $mensaje_html = '';
+    public string $seccion = 'adm_seccion';
 
-    public array $secciones = array("fc_factura","fc_partida","fc_csd","fc_key_csd","fc_cer_csd");
+    public array $secciones = array("fc_factura","fc_partida","fc_csd","fc_key_csd","fc_cer_csd","fc_conf_traslado");
     public array $links_catalogos = array();
 
     public stdClass $links;
@@ -37,15 +38,17 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         }
 
         $this->links_catalogos["fc_factura"]["titulo"] = "Facturas";
-        $this->links_catalogos["fc_factura"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_factura"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["fc_partida"]["titulo"] = "Partidas";
-        $this->links_catalogos["fc_partida"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_partida"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["fc_csd"]["titulo"] = "CSD";
-        $this->links_catalogos["fc_csd"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_csd"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["fc_key_csd"]["titulo"] = "KEY CSD";
-        $this->links_catalogos["fc_key_csd"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_key_csd"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["fc_cer_csd"]["titulo"] = "CER CSD";
-        $this->links_catalogos["fc_cer_csd"]["subtitulo"] = "Catologo";
+        $this->links_catalogos["fc_cer_csd"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["fc_conf_traslado"]["titulo"] = "Configuracion Traslado";
+        $this->links_catalogos["fc_conf_traslado"]["subtitulo"] = "Catalogo";
     }
 
     /**
