@@ -22,7 +22,7 @@ class controlador_fc_csd extends \gamboamartin\facturacion\controllers\controlad
         $this->sidebar['alta']['titulo'] = "Alta CSD";
         $this->sidebar['alta']['stepper_active'] = true;
         $this->sidebar['alta']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true));
+            $this->menu_item(menu_item_titulo: "", link: $this->link_alta,menu_lateral_active: true));
 
         $this->sidebar['modifica']['titulo'] = "Modifica CSD";
         $this->sidebar['modifica']['stepper_active'] = true;
