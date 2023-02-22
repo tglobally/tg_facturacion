@@ -19,17 +19,23 @@ class controlador_fc_factura extends \gamboamartin\facturacion\controllers\contr
             $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_seccion_active: true,
                 menu_lateral_active: true));
 
-        $this->sidebar['alta']['titulo'] = "Alta Factura";
+
+        $this->sidebar['alta']['titulo'] = "Facturas";
         $this->sidebar['alta']['stepper_active'] = true;
         $this->sidebar['alta']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Nueva Seccion", link: $this->link_alta));
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true));
 
-        $this->sidebar['modifica']['titulo'] = "Modifica Factura";
+        $this->sidebar['modifica']['titulo'] = "Facturas";
         $this->sidebar['modifica']['stepper_active'] = true;
         $this->sidebar['modifica']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Nueva Seccion", link: $this->link_alta,menu_seccion_active: true));
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_lateral_active: true),
+            $this->menu_item(menu_item_titulo: "Partidas", link: $this->link_fc_factura_nueva_partida,menu_seccion_active: true));
+
+        $this->sidebar['nueva_partida']['titulo'] = "Facturas";
+        $this->sidebar['nueva_partida']['stepper_active'] = true;
+        $this->sidebar['nueva_partida']['menu'] = array(
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_seccion_active: true),
+            $this->menu_item(menu_item_titulo: "Partidas", link: $this->link_fc_factura_nueva_partida,menu_lateral_active: true));
 
     }
 
