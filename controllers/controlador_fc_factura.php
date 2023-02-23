@@ -1,6 +1,7 @@
 <?php
 namespace tglobally\tg_facturacion\controllers;
 
+use gamboamartin\errores\errores;
 use PDO;
 use stdClass;
 use tglobally\template_tg\html;
@@ -38,6 +39,22 @@ class controlador_fc_factura extends \gamboamartin\facturacion\controllers\contr
             $this->menu_item(menu_item_titulo: "Partidas", link: $this->link_fc_factura_nueva_partida,menu_lateral_active: true));
 
     }
+
+    public function nueva_partida(bool $header, bool $ws = false): array|stdClass
+    {
+        $this->modifica($header, $ws);
+
+       $partida = parent::nueva_partida($header, $ws);
+        if (errores::$error) {
+            $error = $this->errores->error(mensaje: 'Error al inicializar partida', data: $partida);
+            print_r($error);
+            die('Error');
+        }
+
+       return $partida;
+    }
+
+
 
     public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array
     {
