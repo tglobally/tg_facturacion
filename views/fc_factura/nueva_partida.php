@@ -42,10 +42,7 @@
                 </div>
                 <div class="card-body">
                     <div class="col-md-12">
-                        <?php foreach ($controlador->partidas->registros as $partida) {
-
-
-                            ?>
+                        <?php foreach ($controlador->partidas->registros as $partida) {?>
                             <table id="fc_partida" class="table table-striped"
                                    style="font-size: 12px; border: 2px solid #e0e0e0; border-radius: 0.5rem !important;">
                                 <?php echo $controlador->t_head_producto; ?>

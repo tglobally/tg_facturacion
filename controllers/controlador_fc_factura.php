@@ -54,7 +54,18 @@ class controlador_fc_factura extends \gamboamartin\facturacion\controllers\contr
        return $partida;
     }
 
+    public function alta_partida_bd(bool $header, bool $ws = false)
+    {
+        $partida = parent::alta_partida_bd(false, $ws);
+        if (errores::$error) {
+            $error = $this->errores->error(mensaje: 'Error ejecutar acciones de  partida', data: $partida);
+            print_r($error);
+            die('Error');
+        }
 
+        header('Location:'.$this->link_fc_factura_nueva_partida);
+        exit;
+    }
 
     public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array
     {
