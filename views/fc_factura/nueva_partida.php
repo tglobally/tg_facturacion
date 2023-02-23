@@ -40,7 +40,7 @@
                 <div class="card-header">
                     <span class="text-header">Partidas Agregadas</span>
                 </div>
-                <div class="card-body">
+                <div class="card-body partidas">
                     <div class="col-md-12">
                         <?php foreach ($controlador->partidas->registros as $partida) {?>
                             <table id="fc_partida" class="table table-striped"

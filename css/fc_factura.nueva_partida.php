@@ -8,6 +8,11 @@ include $ruta_template_base.'assets/css/_base_css.php';
 
 <style>
 
+    .head-principal{
+        background-color: #0B0595 !important;
+    }
+
+
     body .pagination li.page-item a:hover, body .pagination li.page-item a.active, body .pagination-carousel li a:hover, body .pagination-carousel li.active a, .header .top-bar .pull-right, body .color-secondary, body .btn.color-secondary {
         background-color: #ffffff;
     }
@@ -180,13 +185,13 @@ include $ruta_template_base.'assets/css/_base_css.php';
         background-color: #ddd !important;
     }
 
-    .tablas_nominas{
+    .partidas{
         padding: 0 !important;
     }
 
-    .tablas_nominas  .col-md-12{
-        padding-left: 0px;
-        padding-right: 0px;
+    .partidas  .col-md-12{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
     }
 
     .tabla_titulo{
@@ -195,9 +200,7 @@ include $ruta_template_base.'assets/css/_base_css.php';
         background-color: rgba(113, 107, 107, 0.12);
     }
 
-    #nominas_percepciones{
-        width: auto !important;
-    }
+
 
 
 
