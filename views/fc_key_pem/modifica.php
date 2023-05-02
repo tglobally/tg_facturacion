@@ -10,10 +10,9 @@
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_modifica_bd;?>" class="form-additional">
 
+                <?php echo $controlador->inputs->fc_key_csd_id; ?>
                 <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
-                <?php echo $controlador->inputs->doc_documento_id; ?>
-                <?php echo $controlador->inputs->fc_csd_id; ?>
+                <?php echo $controlador->inputs->documento; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " value="modifica">Guarda</button>

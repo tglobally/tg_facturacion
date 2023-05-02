@@ -22,7 +22,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $seccion = 'adm_seccion';
 
     public array $secciones = array("fc_factura","fc_partida","fc_csd","fc_key_csd","fc_cer_csd", "fc_key_pem",
-        "fc_conf_traslado",
+        "fc_cer_pem","fc_conf_traslado",
         "fc_traslado","fc_conf_retenido","fc_retenido");
     public array $links_catalogos = array();
 
@@ -59,6 +59,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["fc_retenido"]["subtitulo"] = "Catalogo";
         $this->links_catalogos["fc_key_pem"]["titulo"] = "KEY PEM";
         $this->links_catalogos["fc_key_pem"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["fc_cer_pem"]["titulo"] = "CER PEM";
+        $this->links_catalogos["fc_cer_pem"]["subtitulo"] = "Catalogo";
     }
 
     /**
