@@ -11,7 +11,7 @@
             <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional" enctype="multipart/form-data">
 
                 <?php echo $controlador->inputs->fc_key_csd_id; ?>
-                <?php echo $controlador->inputs->codigo; ?>
+                <?php echo $controlador->inputs->descripcion; ?>
                 <?php echo $controlador->inputs->documento; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
