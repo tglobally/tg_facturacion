@@ -10,10 +10,9 @@
         <div class="  form-main" id="form">
             <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional" enctype="multipart/form-data">
 
-                <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
                 <?php echo $controlador->inputs->documento; ?>
                 <?php echo $controlador->inputs->fc_csd_id; ?>
+                <?php echo $controlador->inputs->descripcion; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Guarda</button>
