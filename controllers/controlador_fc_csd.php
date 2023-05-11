@@ -27,24 +27,28 @@ class controlador_fc_csd extends \gamboamartin\facturacion\controllers\controlad
         $this->sidebar['modifica']['titulo'] = "Modifica CSD";
         $this->sidebar['modifica']['stepper_active'] = true;
         $this->sidebar['modifica']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Key", link: $this->link_fc_key_csd,menu_seccion_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Cer", link: $this->link_fc_cer_csd,menu_seccion_active: true));
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_lateral_active: true));
+    }
 
-        $this->sidebar['subir_key']['titulo'] = "Modifica CSD";
-        $this->sidebar['subir_key']['stepper_active'] = true;
-        $this->sidebar['subir_key']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_seccion_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Key", link: $this->link_fc_key_csd,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Cer", link: $this->link_fc_cer_csd,menu_seccion_active: true));
+    public function init_inputs(): array
+    {
+        $identificador = "org_sucursal_id";
+        $propiedades = array("label" => "Sucursal","cols" => 12);
+        $this->asignar_propiedad(identificador:$identificador, propiedades: $propiedades);
 
-        $this->sidebar['subir_cer']['titulo'] = "Modifica CSD";
-        $this->sidebar['subir_cer']['stepper_active'] = true;
-        $this->sidebar['subir_cer']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_modifica,menu_seccion_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Key", link: $this->link_fc_key_csd,menu_seccion_active: true),
-            $this->menu_item(menu_item_titulo: "Subir Cer", link: $this->link_fc_cer_csd,menu_lateral_active: true));
+        $identificador = "serie";
+        $propiedades = array("place_holder" => "Serie", "cols" => 4);
+        $this->asignar_propiedad(identificador:$identificador, propiedades: $propiedades);
 
+        $identificador = "no_certificado";
+        $propiedades = array("place_holder" => "No Certificado", "cols" => 12);
+        $this->asignar_propiedad(identificador:$identificador, propiedades: $propiedades);
+
+        $identificador = "password";
+        $propiedades = array("place_holder" => "Password", "cols" => 4);
+        $this->asignar_propiedad(identificador:$identificador, propiedades: $propiedades);
+
+        return $this->keys_selects;
     }
 
     public function menu_item(string $menu_item_titulo, string $link, bool $menu_seccion_active = false,bool $menu_lateral_active = false): array

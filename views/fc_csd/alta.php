@@ -11,9 +11,9 @@
             <form method="post" action="<?php echo $controlador->link_alta_bd;?>" class="form-additional">
 
                 <?php echo $controlador->inputs->org_sucursal_id; ?>
-                <?php echo $controlador->inputs->codigo; ?>
-                <?php echo $controlador->inputs->codigo_bis; ?>
+                <?php echo $controlador->inputs->no_certificado; ?>
                 <?php echo $controlador->inputs->serie; ?>
+                <?php echo $controlador->inputs->password; ?>
                 <div class="buttons col-md-12">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-info btn-guarda col-md-12 " name="btn_action_next" value="modifica">Guarda</button>
