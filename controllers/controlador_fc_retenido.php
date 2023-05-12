@@ -22,14 +22,12 @@ class controlador_fc_retenido extends \gamboamartin\facturacion\controllers\cont
         $this->sidebar['alta']['titulo'] = "Alta Retenido";
         $this->sidebar['alta']['stepper_active'] = true;
         $this->sidebar['alta']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Nueva Seccion", link: $this->link_alta));
+            $this->menu_item(menu_item_titulo: "Alta", link: $this->link_alta,menu_lateral_active: true));
 
         $this->sidebar['modifica']['titulo'] = "Modifica Retenido";
         $this->sidebar['modifica']['stepper_active'] = true;
         $this->sidebar['modifica']['menu'] = array(
-            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true),
-            $this->menu_item(menu_item_titulo: "Nueva Seccion", link: $this->link_alta,menu_seccion_active: true));
+            $this->menu_item(menu_item_titulo: "Modifica", link: $this->link_alta,menu_lateral_active: true));
 
     }
 
