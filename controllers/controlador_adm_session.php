@@ -30,6 +30,10 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
 
     public function __construct(PDO $link, stdClass $paths_conf = new stdClass())
     {
+        if (!isset($_GET['seccion'])){
+            $this->seccion = '';
+        }
+
         parent::__construct($link, $paths_conf);
 
         $this->links = (new links_menu(link: $link, registro_id: $this->registro_id))->genera_links($this);
